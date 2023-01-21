@@ -3,12 +3,10 @@ import * as React from 'react'
 function App() {
   return (
     <div>
-      <h1>React + Typescript + Vite - Starter</h1>
-      <p>
-        <i>
-          Created By <a href="https://www.yonycalsin.com/">Yony Calsin</a>
-        </i>
-      </p>
+      <a href="https://www.npmjs.com/package/ms" target="_blank" rel="noreferrer">
+        ms
+      </a>{' '}
+      tooly
     </div>
   )
 }

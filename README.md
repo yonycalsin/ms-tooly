@@ -1,18 +1,6 @@
-# @yonycalsin/react-typescript-vite-starter
+# @yonycalsin/ms-tooly
 
-This is a [ReactJS](https://reactjs.org) + [Typescript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev) starter.
-
-## What is inside?
-
-This project uses many tools like:
-
-- [React 18](https://reactjs.org)
-- [Vite](https://vitejs.dev)
-- [TypeScript](https://www.typescriptlang.org)
-- [Vitest](https://vitest.dev/)
-- [Testing Library](https://testing-library.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
+[ms](https://www.npmjs.com/package/ms) tooly
 
 ## Requirements
 

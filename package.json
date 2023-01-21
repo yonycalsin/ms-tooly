@@ -1,8 +1,8 @@
 {
-  "name": "@yonycalsin/react-typescript-vite-starter",
+  "name": "@yonycalsin/ms-tooly",
   "version": "0.0.0",
   "private": true,
-  "description": "React + Typescript + Vite - Starter",
+  "description": "MS - Tooly",
   "author": "Yony Calsin",
   "scripts": {
     "lib:ts": "tsc",
