@@ -1,41 +1,11 @@
 import * as React from 'react'
-import {
-  Box,
-  Button,
-  Checkbox,
-  Container,
-  FormControl,
-  FormLabel,
-  Heading,
-  Text,
-  Textarea,
-  useColorMode,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Button, Checkbox, Container, FormControl, FormLabel, Textarea, VStack } from '@chakra-ui/react'
+
+import { MainLayout } from 'layouts/main-layout'
 
 function HomeScreen() {
-  const { toggleColorMode } = useColorMode()
-
   return (
-    <>
-      <Box
-        py="5"
-        backgroundColor="primary.50"
-        _dark={{
-          backgroundColor: 'gray.900',
-        }}
-      >
-        <Container display="flex" justifyContent="center">
-          <VStack>
-            <Heading display="inline" onClick={toggleColorMode}>
-              MS Tooly
-            </Heading>
-            <Text textAlign="center">
-              Use <b>ms-tooly</b> to easily convert various time formats to milliseconds.
-            </Text>
-          </VStack>
-        </Container>
-      </Box>
+    <MainLayout>
       <Box py="10">
         <Container>
           <VStack spacing="4">
@@ -58,7 +28,7 @@ function HomeScreen() {
           </VStack>
         </Container>
       </Box>
-    </>
+    </MainLayout>
   )
 }
 
