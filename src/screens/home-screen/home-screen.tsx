@@ -1,24 +1,47 @@
 import * as React from 'react'
-import { Box, Button, Container, FormControl, FormLabel, Heading, Text, Textarea, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Checkbox,
+  Container,
+  FormControl,
+  FormLabel,
+  Heading,
+  Text,
+  Textarea,
+  useColorMode,
+  VStack,
+} from '@chakra-ui/react'
 
 function HomeScreen() {
+  const { toggleColorMode } = useColorMode()
+
   return (
     <>
-      <Box py="5" backgroundColor="primary.50">
+      <Box
+        py="5"
+        backgroundColor="primary.50"
+        _dark={{
+          backgroundColor: 'gray.900',
+        }}
+      >
         <Container display="flex" justifyContent="center">
-          <VStack spacing="6">
-            <Heading display="inline">MS Tooly</Heading>
+          <VStack>
+            <Heading display="inline" onClick={toggleColorMode}>
+              MS Tooly
+            </Heading>
             <Text textAlign="center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, reiciendis quod. Laudantium,
-              fugiat saepe maiores hic asperiores quos earum, excepturi placeat velit provident repudiandae quo eligendi
-              voluptates, dolore obcaecati! Odit.
+              Use <b>ms-tooly</b> to easily convert various time formats to milliseconds.
             </Text>
           </VStack>
         </Container>
       </Box>
       <Box py="10">
         <Container>
-          <VStack spacing="6">
+          <VStack spacing="4">
+            <FormControl>
+              <Checkbox defaultChecked>Convert to full format</Checkbox>
+            </FormControl>
             <FormControl isRequired>
               <FormLabel>Input</FormLabel>
               <Textarea />
