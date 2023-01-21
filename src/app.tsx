@@ -1,13 +1,18 @@
 import * as React from 'react'
+import { Button, ChakraProvider, Container, HStack } from '@chakra-ui/react'
+
+import { mainTheme } from 'themes'
 
 function App() {
   return (
-    <div>
-      <a href="https://www.npmjs.com/package/ms" target="_blank" rel="noreferrer">
-        ms
-      </a>{' '}
-      tooly
-    </div>
+    <ChakraProvider theme={mainTheme}>
+      <Container my="10">
+        <HStack>
+          <Button>Click Me</Button>
+          <Button colorScheme="primary">Click Me</Button>
+        </HStack>
+      </Container>
+    </ChakraProvider>
   )
 }
 

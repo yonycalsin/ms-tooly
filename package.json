@@ -30,7 +30,8 @@
     "test:unit:ci": "pnpm run lib:vitest run --coverage",
     "clean": "pnpm exec rimraf -rf dist coverage build",
     "clean:force": "pnpm run clean && pnpm exec rimraf -rf node_module",
-    "prepare": "pnpm exec husky install"
+    "prepare": "pnpm exec husky install",
+    "postinstall": "chakra-cli tokens ./src/themes/main-theme/main-theme.ts"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
@@ -38,10 +39,16 @@
     ]
   },
   "dependencies": {
+    "@chakra-ui/react": "2.4.9",
+    "@chakra-ui/styled-system": "2.5.1",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "framer-motion": "8.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "2.3.0",
     "@dotenv-cloak/cli": "2.0.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
