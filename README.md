@@ -37,4 +37,4 @@ pnpm run test:unit
 
 ### License
 
-©2022 Yony Calsin. All Rights Reserved.
+©2023 Yony Calsin. All Rights Reserved.
