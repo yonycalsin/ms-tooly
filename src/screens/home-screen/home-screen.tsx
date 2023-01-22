@@ -1,31 +1,25 @@
 import * as React from 'react'
-import { Box, Button, Checkbox, Container, FormControl, FormLabel, Textarea, VStack } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 
+import { ConverterForm, ConverterStateContext, useConverterState } from 'modules/converter'
 import { MainLayout } from 'layouts/main-layout'
+
+const HomeScreenContent = () => {
+  const { state, handleSetInput } = useConverterState()
+
+  return (
+    <ConverterStateContext.Provider value={{ state, handleSetInput }}>
+      <ConverterForm />
+    </ConverterStateContext.Provider>
+  )
+}
 
 function HomeScreen() {
   return (
     <MainLayout>
       <Box py="10">
         <Container>
-          <VStack spacing="4">
-            <FormControl>
-              <Checkbox defaultChecked>Convert to full format</Checkbox>
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Input</FormLabel>
-              <Textarea />
-            </FormControl>
-            <FormControl isRequired>
-              <FormLabel>Output</FormLabel>
-              <Textarea readOnly backgroundColor="gray.100" />
-            </FormControl>
-            <Box w="full">
-              <Button w="full" colorScheme="primary">
-                Copy Output
-              </Button>
-            </Box>
-          </VStack>
+          <HomeScreenContent />
         </Container>
       </Box>
     </MainLayout>
